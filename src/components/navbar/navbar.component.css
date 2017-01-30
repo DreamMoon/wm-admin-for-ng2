@@ -1,0 +1,96 @@
+.m-navbar {
+    position: fixed;
+    height: 52px;
+    line-height: 52px;
+    background-color: #fff;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1010;
+    box-shadow: 0 1px 1px rgba(0,0,0,.15);
+    -moz-box-shadow: 0 1px 1px rgba(0,0,0,.15);
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.15);
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+}
+.m-navbar .m-navbar_header {
+    width: 240px;
+    height: 52px;
+    background-color: #1c2b36;
+    float: left;
+    overflow: hidden;
+    transition: width .5s ease;
+    -webkit-transition: width .5s;
+    -moz-transition: width .5s;
+    -ms-transition: width .5s;
+    -o-transition: width .5s;
+}
+.m-navbar .m-navbar_header .u-navbar_title {
+    text-align: center;
+    font-size: 20px;
+}
+.m-navbar .m-navbar_header .u-navbar_title a {
+    color: #a2a7b5;
+    text-decoration: none;
+}
+
+.m-navbar .m-navbar_container {
+    padding: 0 10px;
+    background-color: white;
+    width: 100%;
+}
+.m-navbar .m-navbar_container .m-navbar_cleft {
+    float: left;
+    padding: 0 15px;
+}
+.m-navbar .m-navbar_container .u-navbar_btn {
+    display: inline-block;
+    padding: 0 12px;
+    cursor: pointer;
+    overflow: hidden;
+    -webkit-transition: padding 0.5s ease;
+    -moz-transition: padding 0.5s ease;
+    -ms-transition: padding 0.5s ease;
+    -o-transition: padding 0.5s ease;
+    transition: padding 0.5s ease;
+}
+.m-navbar .m-navbar_container .u-navbar_btn>i {
+    font-size: 20px;
+    position: relative;
+    top: 3px;
+    color: #666;
+    opacity: 1;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+/*收起Sidebar*/
+.m-navbar.z-collapsed .m-navbar_header {
+    width: 60px;
+}
+
+/*响应式*/
+@media (max-width: 991px) {
+    .m-navbar {
+        left: -240px;
+    }
+    .m-navbar.z-collapsed {
+        left: -60px;
+    }
+    .m-navbar .m-navbar_container .u-navbar_btn.z-over_hide {
+        padding: 0;
+        font-size: 0;
+        width: 0;
+        height: 0;
+    }
+    .m-navbar .m-navbar_container .u-navbar_btn.z-over_hide>i {
+        font-size: 0;
+        opacity: 0;
+    }
+}
