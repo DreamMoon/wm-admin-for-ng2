@@ -21,6 +21,7 @@ var navbar_component_1 = require('../components/navbar/navbar.component');
 var sidebar_component_1 = require('../components/sidebar/sidebar.component');
 var wrapper_component_1 = require("../components/wrapper/wrapper.component");
 var scroll_to_top_component_1 = require("../components/scroll-to-top/scroll-to-top.component");
+var footer_component_1 = require("../components/footer/footer.component");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -36,6 +37,7 @@ var AppModule = (function () {
             declarations: [
                 app_component_1.AppComponent,
                 container_component_1.ContainerComponent,
+                footer_component_1.FooterComponent,
                 home_component_1.HomeComponent,
                 navbar_component_1.NavbarComponent,
                 scroll_to_top_component_1.ScrollToTopComponent,

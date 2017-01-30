@@ -25,4 +25,13 @@ export class NavbarComponent {
         this.showSidebarHeader = !this.showSidebarHeader;
         this.showSidebarHeaderChange.emit(this.showSidebarHeader);
     }
+    
+    curDropdownMenuIndex: number = 0; // 当前显示的下拉菜单。0表示没有显示任何菜单；大于0表示显示第几个下拉菜单
+    showDropdownMenu(index: number): void {
+        if(this.curDropdownMenuIndex == index) {
+            this.curDropdownMenuIndex = 0;
+        } else {
+            this.curDropdownMenuIndex = index;
+        }
+    }
 }

@@ -20,6 +20,7 @@ var NavbarComponent = (function () {
         // 控制是否显示侧边栏中的header
         this.showSidebarHeader = true;
         this.showSidebarHeaderChange = new core_1.EventEmitter();
+        this.curDropdownMenuIndex = 0; // 当前显示的下拉菜单。0表示没有显示任何菜单；大于0表示显示第几个下拉菜单
     }
     NavbarComponent.prototype.toggelSidebar = function () {
         this.showSidebar = !this.showSidebar;
@@ -28,6 +29,14 @@ var NavbarComponent = (function () {
     NavbarComponent.prototype.toggleSidebarHeader = function () {
         this.showSidebarHeader = !this.showSidebarHeader;
         this.showSidebarHeaderChange.emit(this.showSidebarHeader);
+    };
+    NavbarComponent.prototype.showDropdownMenu = function (index) {
+        if (this.curDropdownMenuIndex == index) {
+            this.curDropdownMenuIndex = 0;
+        }
+        else {
+            this.curDropdownMenuIndex = index;
+        }
     };
     __decorate([
         core_1.Input(), 

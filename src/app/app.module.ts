@@ -13,6 +13,7 @@ import { NavbarComponent } from '../components/navbar/navbar.component';
 import { SidebarComponent } from '../components/sidebar/sidebar.component';
 import {WrapperComponent} from "../components/wrapper/wrapper.component";
 import {ScrollToTopComponent} from "../components/scroll-to-top/scroll-to-top.component";
+import {FooterComponent} from "../components/footer/footer.component";
 
 @NgModule({
   imports:      [
@@ -25,6 +26,7 @@ import {ScrollToTopComponent} from "../components/scroll-to-top/scroll-to-top.co
   declarations: [
     AppComponent,
     ContainerComponent,
+    FooterComponent,
     HomeComponent,
     NavbarComponent,
     ScrollToTopComponent,
